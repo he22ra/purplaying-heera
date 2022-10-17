@@ -156,39 +156,70 @@
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="agree-14">
+                      <input type="checkbox" class="form-check-input" id="agreeAll" name="agree" onclick="selectAll(this)"> 
                       <label class="form-check-label" for="agree-14">전체동의</label>
                     </div>
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                   <div class="accordion-body">
-                    <div class="form-check mb-2">
-                      <input type="checkbox" class="form-check-input" id="agree-14">
-                      <label class="form-check-label" for="agree-14">만 14세 이상입니다. (* 필수)</label>
+                    <div class="row mb-2">
+                      <div class="col-8">
+                        <input type="checkbox" class="form-check-input" id="agree-1" name="agree">
+                        <label class="form-check-label" for="agree-1">만 14세 이상입니다. (* 필수)</label>
+                      </div>
+                      <div class="col-4 text-small text-muted text-end"><a href="#">내용보기</a></div>
                     </div>
-                    <div class="form-check mb-2">
-                      <input type="checkbox" class="form-check-input" id="agree-14">
-                      <label class="form-check-label" for="agree-14">퍼플레잉 이용 약관 동의 (* 필수)</label>
+                    
+                    <div class="row mb-2">
+                      <div class="col-8">
+                        <input type="checkbox" class="form-check-input" id="agree-2" name="agree">
+                        <label class="form-check-label" for="agree-2">퍼플레잉 이용 약관 동의 (* 필수)</label>
+                      </div>
+                      <div class="col-4 text-small text-muted text-end"><a href="#">내용보기</a></div>
                     </div>
-                    <div class="form-check mb-2">
-                      <input type="checkbox" class="form-check-input" id="agree-14">
-                      <label class="form-check-label" for="agree-14">개인정보 수집 및 이용 동의 (* 필수)</label>
+                    
+                    <div class="row mb-2">
+                      <div class="col-8">
+                        <input type="checkbox" class="form-check-input" id="agree-3" name="agree">
+                        <label class="form-check-label" for="agree-3">개인정보 수집 및 이용 동의 (* 필수)</label>
+                      </div>
+                      <div class="col-4 text-small text-muted text-end"><a href="#">내용보기</a></div>
                     </div>
-                    <div class="form-check mb-2">
-                      <input type="checkbox" class="form-check-input" id="agree-14">
-                      <label class="form-check-label" for="agree-14">개인정보 제 3자 제공 동의 (선택)</label>
+
+                    <div class="row mb-2">
+                      <div class="col-8">
+                        <input type="checkbox" class="form-check-input" id="agree-4" name="agree">
+                        <label class="form-check-label" for="agree-4">개인정보 제 3자 제공 동의 (선택)</label>
+                      </div>
+                      <div class="col-4 text-small text-muted text-end"><a href="#">내용보기</a></div>
                     </div>
-                    <div class="form-check mb-2">
-                      <input type="checkbox" class="form-check-input" id="agree-14">
-                      <label class="form-check-label" for="agree-14">마케팅 정보 수신 동의 (선택)</label>
+
+                    <div class="row mb-2">
+                      <div class="col-8">
+                        <input type="checkbox" class="form-check-input" id="agree-5" name="agree">
+                        <label class="form-check-label" for="agree-5">마케팅 정보 수신 동의 (선택)</label>
+                      </div>
+                      <div class="col-4 text-small text-muted text-end"><a href="#">내용보기</a></div>
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
           <button class="w-100 btn btn-primary btn-lg mt-4" type="submit">회원가입</button>
         </form>
+
+        <hr class="my-4">
+        
+        <div class="row col-md-8 d-block mx-auto">
+          <p class="text-center">이미 퍼플레잉 계정이 있나요? <a href="#">로그인</a></p>
+        </div>
+        
+        <div class="row col-md-8 d-block mx-auto">
+          <h5 class="mb-3 text-center">또는 다른 방법으로 회원가입</h5>
+        </div>
+
       </div>
     </div>
 
@@ -240,5 +271,16 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    function selectAll(selectAll)  {
+      const checkboxes 
+          = document.getElementsByName("agree");
+      
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked;
+      })
+    }
+  </script>
 </body>
 </html>
