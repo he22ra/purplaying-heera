@@ -148,76 +148,46 @@
               <input type="number" class="form-control mb-2" id="userphone" placeholder="휴대폰 번호 (-없이 입력)">
               <input type="number" class="form-control" id="userphoneConfirm" placeholder="인증번호 입력 (남은 시간 2분 58초)">
             </div>
-
-            <div class="col-12 mt-2">
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="same-address">
-                <label class="form-check-label" for="same-address">만 14세 이상입니다. (* 필수)</label>
-              </div>
-    
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="save-info">
-                <label class="form-check-label" for="save-info">Save this information for next time</label>
-              </div>
-            </div>
-           
-          <hr class="my-4">
-
-          <h4 class="mb-3">Payment</h4>
-
-          <div class="my-3">
-            <div class="form-check">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-              <label class="form-check-label" for="credit">Credit card</label>
-            </div>
-            <div class="form-check">
-              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-              <label class="form-check-label" for="debit">Debit card</label>
-            </div>
-            <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-              <label class="form-check-label" for="paypal">PayPal</label>
-            </div>
-          </div>
-
-          <div class="row gy-3">
-            <div class="col-md-6">
-              <label for="cc-name" class="form-label">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required>
-              <small class="text-muted">Full name as displayed on card</small>
-              <div class="invalid-feedback">
-                Name on card is required
+            
+            <hr class="my-4">
+            <!-- 전체 동의 -->
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="agree-14">
+                      <label class="form-check-label" for="agree-14">전체동의</label>
+                    </div>
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <div class="form-check mb-2">
+                      <input type="checkbox" class="form-check-input" id="agree-14">
+                      <label class="form-check-label" for="agree-14">만 14세 이상입니다. (* 필수)</label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input type="checkbox" class="form-check-input" id="agree-14">
+                      <label class="form-check-label" for="agree-14">퍼플레잉 이용 약관 동의 (* 필수)</label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input type="checkbox" class="form-check-input" id="agree-14">
+                      <label class="form-check-label" for="agree-14">개인정보 수집 및 이용 동의 (* 필수)</label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input type="checkbox" class="form-check-input" id="agree-14">
+                      <label class="form-check-label" for="agree-14">개인정보 제 3자 제공 동의 (선택)</label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input type="checkbox" class="form-check-input" id="agree-14">
+                      <label class="form-check-label" for="agree-14">마케팅 정보 수신 동의 (선택)</label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="col-md-6">
-              <label for="cc-number" class="form-label">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required>
-              <div class="invalid-feedback">
-                Credit card number is required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-expiration" class="form-label">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-cvv" class="form-label">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-              <div class="invalid-feedback">
-                Security code required
-              </div>
-            </div>
-          </div>
-
-          <hr class="my-4">
-
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          <button class="w-100 btn btn-primary btn-lg mt-4" type="submit">회원가입</button>
         </form>
       </div>
     </div>
