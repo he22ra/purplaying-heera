@@ -56,7 +56,7 @@
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          <svg class="logo" width="140" height="36" aria-label="Bootstrap"></svg>
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -76,11 +76,11 @@
             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="mypage.html">마이페이지</a></li>
+            <li><a class="dropdown-item" href="#">설정</a></li>
+            <li><a class="dropdown-item" href="#">고객센터</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="#">로그아웃</a></li>
           </ul>
         </div>
       </div>
@@ -94,20 +94,16 @@
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
+      <div class="carousel-item active" id="item02">
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
+            <h1>물고기는 존재하지 않는다</h1>
             <p>Some representative placeholder content for the first slide of the carousel.</p>
             <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
+      <div class="carousel-item"  id="item01">
         <div class="container">
           <div class="carousel-caption">
             <h1>Another example headline.</h1>
@@ -116,9 +112,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
+      <div class="carousel-item" id="item03">
         <div class="container">
           <div class="carousel-caption text-end">
             <h1>One more for good measure.</h1>
@@ -245,20 +239,5 @@
       </p>
     </div>
   </footer>
-  
-  <!-- 네이버 로그인 callback -->
-  <script type="text/javascript">
-    var naver_id_login = new naver_id_login("YOUR_CLIENT_ID", "YOUR_CALLBACK_URL");
-    // 접근 토큰 값 출력
-    alert(naver_id_login.oauthParams.access_token);
-    // 네이버 사용자 프로필 조회
-    naver_id_login.get_naver_userprofile("naverSignInCallback()");
-    // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
-    function naverSignInCallback() {
-      alert(naver_id_login.getProfileData('email'));
-      alert(naver_id_login.getProfileData('nickname'));
-      alert(naver_id_login.getProfileData('age'));
-    }
-  </script>
 </body>
 </html>

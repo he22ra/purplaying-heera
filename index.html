@@ -7,12 +7,18 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/dist/bootstrap.min.css"> <!-- 부트스트랩 -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">   <!-- 아이콘 -->
   <link rel="stylesheet" href="assets/css/owl.css">   <!-- 캐러셀(carousel) -->
   <link rel="stylesheet" href="assets/css/animate.css">   <!-- 애니메이션효과 -->
   <link rel="stylesheet" href="assets/css/main.css" > <!-- main style-->
   <link rel="stylesheet" href="assets/css/headers.css" > <!-- header-->
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/"> <!-- header-->
+  <!-- JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script> 
+  <script src="http://www.w3schools.com/lib/w3data.js"></script> 
+  <!-- 아이콘  -->
+  <script src="https://kit.fontawesome.com/7f409b18dd.js" crossorigin="anonymous"></script>
+  <!-- 네이버 로그인 callback -->
+  <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 
   <title>Purplaying</title>
@@ -43,15 +49,14 @@
     </symbol>
   </svg>
   
- <!--헤더 (메뉴, 네비게이션) -->
- <main>
-  <h1 class="visually-hidden">Headers examples</h1>
-
-  <header class="p-3 mb-3 border-bottom">
+ 
+  <!--헤더 컨테이너-->
+  <h1 class="visually-hidden">Header</h1>
+  <header class="p-3 border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          <svg class="logo" width="140" height="36" aria-label="Bootstrap"></svg>
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -71,29 +76,125 @@
             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="mypage.html">마이페이지</a></li>
+            <li><a class="dropdown-item" href="#">설정</a></li>
+            <li><a class="dropdown-item" href="#">고객센터</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="#">로그아웃</a></li>
           </ul>
         </div>
       </div>
     </div>
   </header>
+  <!-- 카로셀 -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="item02">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>물고기는 존재하지 않는다</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item"  id="item01">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" id="item03">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
   <!--메인 컨테이너 -->
   <section>
-    <h1 class="visually-hidden">홈</h1>
+    <h1 class="visually-hidden">HOME</h1>
     <div class="contentsWrap">
       <!--컨텐츠 영역-->
-      <h1>컨텐츠 영역</h1>
+      <!-- 펀딩 프로젝트 -->
+      <div class="album py-5">
+        <div class="container">
+          <h4>오늘의 신규펀딩</h4>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col"><!-- project thumb start -->
+              <div class="card shadow-sm">
+                <!-- 좋아요 버튼 -->
+                <button class="likeBtn"><i class="fa-solid fa-heart"></i></button>
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-cate">웹툰</p>
+                  <p class="card-text"><h5>1999년 감성으로 찾아온 '세기말 풋사과 보습학원'</h5></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-danger">현재 달성률 00%</strong>
+                  </div>
+                </div>
+              </div>
+            </div><!-- project thumb end -->
+            <div class="col"><!-- project thumb start -->
+              <div class="card shadow-sm">
+                <!-- 좋아요 버튼 -->
+                <button class="likeBtn"><i class="fa-solid fa-heart"></i></button>
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-cate">웹툰</p>
+                  <p class="card-text"><h5>1999년 감성으로 찾아온 '세기말 풋사과 보습학원'</h5></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-danger">현재 달성률 00%</strong>
+                  </div>
+                </div>
+              </div>
+            </div><!-- project thumb end -->
+            <div class="col"><!-- project thumb start -->
+              <div class="card shadow-sm">
+                <!-- 좋아요 버튼 -->
+                <button class="likeBtn"><i class="fa-solid fa-heart"></i></button>
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card-body">
+                  <p class="card-cate">웹툰</p>
+                  <p class="card-text"><h5>1999년 감성으로 찾아온 '세기말 풋사과 보습학원'</h5></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-danger">현재 달성률 00%</strong>
+                  </div>
+                </div>
+              </div>
+            </div><!-- project thumb end -->
+
+          </div>
+          
+        </div>
+      </div>
     </div>
 
   </section>
   
 
-  <!--푸터 -->
+  <!--푸터 인클루드-->
   <footer class="py-5">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
@@ -138,9 +239,5 @@
       </p>
     </div>
   </footer>
-
-</main>
-
-<script src="assets/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>

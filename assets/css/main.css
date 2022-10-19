@@ -59,10 +59,11 @@ footer { height: 100%; padding : 0 40px; background-color: #333; color: var(--co
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
-
+/* logo */
+.logo { background: url('../img/purplaying_logo_eng.png'); background-repeat : no-repeat; background-size : contain;}
 /* album card */
 .card  {text-align: left;}
-.bd-placeholder-img { position : relative; background-image: url("https://picsum.photos/500/380");}
+.bd-placeholder-img { position : relative;}
 /* 좋아요 버튼 */
 .likeBtn {z-index: 999; position: absolute; top: 20px; right : 20px; } 
 /* Carousel base class */
@@ -70,7 +71,10 @@ footer { height: 100%; padding : 0 40px; background-color: #333; color: var(--co
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption { bottom: 3rem; z-index: 10;}
 /* Declare heights because of positioning of img element */
-.carousel-item { height: 32rem; }
+.carousel-item { height: 32rem;}
+#item01 { background: url('../img/carousel01.jpg') center; background-repeat : no-repeat; background-size : cover; width: 100%;}
+#item02 { background: url('../img/carousel02.jpg') center; background-repeat : no-repeat; background-size : cover; width: 100%;}
+#item03 { background: url('../img/carousel03.jpg') center; background-repeat : no-repeat; background-size : cover; width: 100%;}
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 { margin-bottom: 1.5rem; text-align: center; }
 /* rtl:begin:ignore */
